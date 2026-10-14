@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vierauge social card</title>
+<!-- Rendered by tools/capture.js at 1200x630 (og.png) and 1280x640 (GitHub social preview).
+     The ticket is the real REQ-28034 from seed 3, Thursday, as in docs/screenshots/02-desk.png. -->
+<link rel="stylesheet" href="../../public/styles.css">
+<style>
+  html, body { height: 100%; overflow: hidden; }
+  body { background-attachment: scroll; }
+  .card {
+    height: 100%; display: grid; grid-template-columns: 1.05fr 1fr; align-items: center;
+    gap: 4vw; padding: 0 5.5vw;
+  }
+  .left { display: grid; gap: 2.2vw; }
+  .mark { display: flex; align-items: center; gap: 1.6vw; }
+  .mark img { width: 6.4vw; height: 6.4vw; }
+  .mark span { font: 600 1.25vw/1 var(--font-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  h1 { font: 600 9.4vw/0.9 var(--font-display); letter-spacing: -0.03em; }
+  .tag { font: italic 2.6vw/1.25 var(--font-display); max-width: 22ch; }
+  .facts { font: 500 1.35vw/1.5 var(--font-data); color: var(--muted); letter-spacing: 0.02em; }
+  .right { position: relative; display: grid; gap: 1.4vw; transform: rotate(1.6deg); }
+  .right .ticket { font-size: 1.15vw; padding: 2vw 2.2vw; gap: 1.2vw; }
+  .right .ticket .tid { font-size: 2.2vw; }
+  .right .fields > div { grid-template-columns: 9vw 1fr; padding: 0.6vw 0; }
+  .right .fields dt { font-size: 0.85vw; }
+  .right .justification { font-size: 1.1vw; padding: 0.9vw 1.1vw; }
+  .right .stamp { font-size: 3.4vw; right: 5%; bottom: 12%; animation: none; }
+  .right .autoreview { font-size: 1.1vw; padding: 1vw 1.2vw; }
+  .right .autoreview .who { font-size: 0.9vw; }
+  .right .form-name, .right .form-meta { font-size: 0.9vw; }
+</style>
+</head>
+<body>
+<svg class="defs" aria-hidden="true">
+  <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+    <feComponentTransfer in="noise" result="speckle"><feFuncA type="discrete" tableValues="1 1 1 0.35 1 1 0.2 1"/></feComponentTransfer>
+    <feComposite in="rough" in2="speckle" operator="in"/>
+  </filter>
+</svg>
+<main class="card">
+  <section class="left">
+    <div class="mark"><img src="../../public/favicon.svg" alt=""><span>Access review desk · five shifts</span></div>
+    <h1>Vierauge</h1>
+    <p class="tag">Nothing gets access on one person's word.</p>
+    <p class="facts">A browser game about access reviews,<br>AI agents and automation bias.<br>Free, open source, runs offline.</p>
+  </section>
+  <section class="right" aria-hidden="true">
+    <article class="ticket" data-kind="agent">
+      <div class="form-head"><span class="form-name">Agentenfreigabe <em>· Agent scope request</em></span><span class="form-meta">Form IAM-7A</span></div>
+      <div class="tid">REQ-28034</div>
+      <dl class="fields">
+        <div><dt>Requester</dt><dd><span class="ref">deploy-pilot.canary <code>AG-13</code></span> <span class="kind-tag">Agent</span></dd></div>
+        <div><dt>Access</dt><dd><code>SRV-RESTART</code> <span class="ent-name">Restart services</span></dd></div>
+        <div><dt>Approved by</dt><dd><span class="ref">Jonas Hinz <code>P-1082</code></span></dd></div>
+      </dl>
+      <p class="justification">Replaces a shared service account.</p>
+      <div class="stamp bad">Abgelehnt<small>§10 Delegation escalates</small></div>
+    </article>
+    <aside class="autoreview">
+      <span class="who">AutoReview</span><span class="rec">recommends <b class="approve">Approve</b></span><span class="conf">83% sure</span>
+      <span class="note">Scope is within the registered purpose.</span>
+    </aside>
+  </section>
+</main>
+</body>
+</html>

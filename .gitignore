@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.claude/
+.DS_Store
+# Build output: the offline file ships as a release asset.
+dist/
+# WebP copies made with `npm run assets -- --webp` for the portfolio site.
+docs/screenshots/*.webp

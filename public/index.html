@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--CSP--><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'"><!--/CSP-->
+<title>Vierauge</title>
+<meta name="description" content="A browser game about access reviews. People ask for access, then AI agents do, and a model pre-screens every ticket. You sign. Free, open source, runs offline.">
+<meta name="theme-color" content="#0d1518">
+<link rel="canonical" href="https://tibcz.github.io/Vierauge/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vierauge">
+<meta property="og:description" content="Five shifts on an access review desk. People, then AI agents, ask for access. A model pre-screens every ticket. You sign, and the auditors read every stamp.">
+<meta property="og:url" content="https://tibcz.github.io/Vierauge/">
+<meta property="og:image" content="https://tibcz.github.io/Vierauge/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vierauge: an access request stamped Abgelehnt, while the AI pre-screener recommends approval.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--APP-->
+<div id="app" aria-live="off"></div>
+<div id="announcer" class="sr-only" aria-live="polite"></div>
+<svg class="defs" aria-hidden="true" focusable="false">
+  <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+    <feComponentTransfer in="noise" result="speckle"><feFuncA type="discrete" tableValues="1 1 1 0.35 1 1 0.2 1"/></feComponentTransfer>
+    <feComposite in="rough" in2="speckle" operator="in"/>
+  </filter>
+</svg>
+<noscript><p class="noscript">Vierauge needs JavaScript. Everything runs in this page; nothing is sent anywhere.</p></noscript>
+<!--/APP-->
+<script src="engine.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

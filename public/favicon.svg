@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#18282c"/>
+      <stop offset="1" stop-color="#0b1215"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="0.72" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#a7bdff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#a7bdff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="230" fill="url(#desk)"/>
+  <rect width="1024" height="1024" rx="230" fill="url(#lamp)"/>
+  <g transform="rotate(-9 512 512)">
+    <rect x="132" y="262" width="760" height="500" rx="70" fill="none" stroke="#e0544a" stroke-width="34"/>
+    <rect x="182" y="312" width="660" height="400" rx="40" fill="none" stroke="#e0544a" stroke-width="12"/>
+  </g>
+  <circle cx="358" cy="512" r="150" fill="#e3eee5"/>
+  <circle cx="666" cy="512" r="150" fill="#e3eee5"/>
+  <circle cx="400" cy="548" r="66" fill="#1a2326"/>
+  <circle cx="708" cy="548" r="66" fill="#1a2326"/>
+  <circle cx="378" cy="524" r="17" fill="#e3eee5"/>
+  <circle cx="686" cy="524" r="17" fill="#e3eee5"/>
+</svg>
